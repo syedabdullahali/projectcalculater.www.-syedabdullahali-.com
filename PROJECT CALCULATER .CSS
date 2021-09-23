@@ -1,0 +1,74 @@
+
+  
+  body{
+   
+    background: linear-gradient(-45deg, #f86ef1,#8430f1,#71d5fa, rgb(253, 176, 74),#8430f1,#f7c625);
+	background-size: 400% 400%;
+	animation: king 15s ease infinite;
+}
+
+@keyframes king {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+  }
+
+  .calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 50vh;
+    grid-template-columns: repeat(4, 85px);
+    grid-template-rows: minmax(90px, auto) repeat(5, 100px);
+  }
+  
+  .calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background:linear-gradient(to right, #34b6f7, hsl(300, 100%, 50%));
+  }
+  
+  .calculator-grid > button:hover{
+    background:linear-gradient(to right, hsl(200, 97%, 70%), hsl(300, 94%, 69%));
+
+    transform: scale(0.99);
+    color: aliceblue;
+    border-radius: 2px;
+   
+}
+
+  
+  .span-two {
+    grid-column: span 2;
+  }
+  
+  .output {
+    grid-column: 1 / -1;
+    background:linear-gradient(to right, #00AAFF, #00FF6C);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border: 1px solid white ;
+  }
+  
+  .output .previous-operand {
+    color: rgba(42, 20, 241, 0.75);
+    font-size: 1.5rem;
+  }
+  
+  .output .current-operand {
+    color: rgb(7, 7, 7);
+    font-size: 2.5rem;
+  }
